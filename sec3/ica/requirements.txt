@@ -1,6 +1,7 @@
 django
 djangorestframework
 django-datatable
+django-countries
 pip
 pytz
 setuptools
