@@ -1,0 +1,34 @@
+{%extends 'base.html'%}
+
+{%block head%}
+<title>All People</title>
+{%endblock%}
+
+{%block body%}
+{%block body2%}
+{%endblock%}
+<div class="row">
+    <div class="col col-xs">
+        <h1>All Persons</h1>
+    </div>
+    <div class="col col-xs text-right">
+        <a class="btn btn-primary" href="/persons/add">Add</a>
+    </div>
+</div>
+<table class="table">
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Country</th>
+    </tr>
+    {% if people %}
+        {%for person in people%}
+        <tr>
+            <td>{{person.fname}}</td>
+            <td>{{person.lname}}</td>
+            <td>{{person.country}}</td>
+        </tr>
+        {%endfor%}
+    {%endif%}
+</table>
+{%endblock%}

@@ -1,0 +1,14 @@
+{%extends 'base.html'%}
+
+{%block head%}
+<title>All People</title>
+{%endblock%}
+
+{%block body%}
+<h1>Add Person</h1>
+<form action="" method="POST">
+    {%csrf_token%}
+    {{form.as_p}}
+    <button class="btn btn-primary">Submit</button>
+</form>
+{%endblock%}
